@@ -14,7 +14,7 @@ func main() {
 
   	// Use those inputs in the actions logic
 	fmt.Println("Hello " + firstGreeting)
-	fmt.Println("Hello " + secondGreeting)
+	fmt.Println("Hello 2do" + secondGreeting)
 
   	// Sometimes inputs are not "required" and we can build around that
 	if thirdGreeting != "" {
