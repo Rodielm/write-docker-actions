@@ -5,13 +5,7 @@ import (
 	"os"
 	)
 
-
-
-func main(){
-	fmt.Println("Hello Docker Actions")
-}
-
-func main(){
+func main() {
 
 	// Access Inputs as environment vars
 	firstGreeting := os.Getenv("INPUT_FIRSTGREETING")
