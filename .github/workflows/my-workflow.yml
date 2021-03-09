@@ -1,4 +1,4 @@
-name: Docker Actions
+name: "Docker Actions"
 
 # Controls when the action will run. 
 on: [push]
@@ -12,5 +12,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: hello-action
+      - name: "hello-action"
         uses: ./.github/actions/hello-world
+        with:
+          firstGreeting: "Learning Lab User"
+
+
