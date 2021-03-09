@@ -1,4 +1,4 @@
-name: Docker Actions
+name: "Docker Actions"
 
 # Controls when the action will run. 
 on: [push]
