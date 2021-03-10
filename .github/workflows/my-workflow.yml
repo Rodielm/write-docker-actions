@@ -1,6 +1,6 @@
 # name: "Docker Actions"
 
-# # Controls when the action will run. 
+# # Controls when the action will run.
 # on: [push]
 
 # # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -16,7 +16,6 @@
 #         uses: ./.github/actions/hello-world
 #         with:
 #           firstGreeting: "Learning Lab User"
-
 
 name: Docker Actions
 
@@ -36,3 +35,11 @@ jobs:
 
       - name: meow
         uses: ./.github/actions/cat-facts
+        id: cat
+
+      - name: create-issue
+        uses: ./.github/actions/issue-maker
+        with:
+          repoToken: ${{secrets.GITHUB_TOKEN}}
+          catFact: ${{steps.cat.outputs.fact}}
+          issueTitle: "a cat fact for you"
